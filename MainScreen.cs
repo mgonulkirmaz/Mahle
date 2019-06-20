@@ -27,6 +27,7 @@ namespace Mahle
         }
 
         SettingsHandler settingsHandler;
+        Logger logger;
         Timer updateTimer = new Timer();    //Calls update function every 1 sec (Updates Date and Time)
         Point panelLocation = new Point(0, 100);    //For indicator location
         Point defUserControlLocation = new Point(200, 25); //For default user control location
@@ -43,8 +44,10 @@ namespace Mahle
             updateTimer.Interval = 1000;
             updateTimer.Tick += new EventHandler(update);
             updateTimer.Start();
-            refreshSelectPanel(buttonMainScreen.Location.Y);
+            refreshSelectPanel(buttonMainScreen.Location.Y);          
             settingsHandler = new SettingsHandler();
+            logger = new Logger(SettingsHandler.logFolder);
+            logger.WriteLog("Ayarlar yüklendi.");
         }
 
         private void update(object sender, EventArgs e)
@@ -72,6 +75,11 @@ namespace Mahle
         private void buttonSettings_Click(object sender, EventArgs e)
         {
             refreshSelectPanel(buttonSettings.Location.Y);
+        }
+
+        private void MainScreen_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            logger.StopLogger();    //Stops logger when program closed
         }
     }
 }
