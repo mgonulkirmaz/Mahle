@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Newtonsoft.Json;
 
 /*
  * refreshSelectPanel(int)   For update indicator panel location (takes only Y axis)
@@ -30,6 +26,7 @@ namespace Mahle
             InitializeComponent();
         }
 
+        SettingsHandler settingsHandler;
         Timer updateTimer = new Timer();    //Calls update function every 1 sec (Updates Date and Time)
         Point panelLocation = new Point(0, 100);    //For indicator location
         Point defUserControlLocation = new Point(200, 25); //For default user control location
@@ -47,6 +44,7 @@ namespace Mahle
             updateTimer.Tick += new EventHandler(update);
             updateTimer.Start();
             refreshSelectPanel(buttonMainScreen.Location.Y);
+            settingsHandler = new SettingsHandler();
         }
 
         private void update(object sender, EventArgs e)
@@ -71,7 +69,7 @@ namespace Mahle
             refreshSelectPanel(buttonMainScreen.Location.Y);
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void buttonSettings_Click(object sender, EventArgs e)
         {
             refreshSelectPanel(buttonSettings.Location.Y);
         }

@@ -1,0 +1,15 @@
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\bin\Debug\Resources\settings.json
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\bin\Debug\Resources\values.json
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\bin\Debug\Mahle.exe.config
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\bin\Debug\Mahle.exe
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\bin\Debug\Mahle.pdb
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\bin\Debug\Newtonsoft.Json.dll
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\bin\Debug\Newtonsoft.Json.xml
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\obj\Debug\Mahle.csprojAssemblyReference.cache
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\obj\Debug\Mahle.MainScreen.resources
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\obj\Debug\Mahle.Properties.Resources.resources
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\obj\Debug\Mahle.csproj.GenerateResource.cache
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\obj\Debug\Mahle.csproj.CoreCompileInputs.cache
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\obj\Debug\Mahle.csproj.CopyComplete
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\obj\Debug\Mahle.exe
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\obj\Debug\Mahle.pdb

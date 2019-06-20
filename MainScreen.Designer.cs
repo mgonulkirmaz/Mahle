@@ -68,7 +68,7 @@
             this.buttonSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSettings.UseVisualStyleBackColor = true;
-            this.buttonSettings.Click += new System.EventHandler(this.button2_Click);
+            this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
             // 
             // buttonMainScreen
             // 
