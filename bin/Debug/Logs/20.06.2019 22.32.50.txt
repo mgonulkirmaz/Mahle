@@ -1,3 +1,0 @@
-20.06.2019 22:32:50 -> Uygulama başlatıldı.
-20.06.2019 22:32:50 -> Ayarlar yüklendi.
-20.06.2019 22:32:51 -> Uygulama kapatıldı.
