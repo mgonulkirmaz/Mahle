@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainScreen));
             this.leftPanel = new System.Windows.Forms.Panel();
             this.buttonSettings = new System.Windows.Forms.Button();
             this.buttonMainScreen = new System.Windows.Forms.Button();
@@ -36,6 +37,10 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.labelTime = new System.Windows.Forms.Label();
             this.labelDate = new System.Windows.Forms.Label();
+            this.btnStart = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.txtLog = new System.Windows.Forms.RichTextBox();
+            this.settingsScreen = new Mahle.SettingsScreen();
             this.leftPanel.SuspendLayout();
             this.topPanel.SuspendLayout();
             this.SuspendLayout();
@@ -68,7 +73,7 @@
             this.buttonSettings.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonSettings.UseVisualStyleBackColor = true;
-            this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
+            this.buttonSettings.Click += new System.EventHandler(this.ButtonSettings_Click);
             // 
             // buttonMainScreen
             // 
@@ -84,7 +89,7 @@
             this.buttonMainScreen.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonMainScreen.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonMainScreen.UseVisualStyleBackColor = true;
-            this.buttonMainScreen.Click += new System.EventHandler(this.buttonMainScreen_Click);
+            this.buttonMainScreen.Click += new System.EventHandler(this.ButtonMainScreen_Click);
             // 
             // panelSelected
             // 
@@ -108,7 +113,7 @@
             this.buttonExit.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.buttonExit.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
+            this.buttonExit.Click += new System.EventHandler(this.ButtonExit_Click);
             // 
             // topPanel
             // 
@@ -119,7 +124,7 @@
             this.topPanel.ForeColor = System.Drawing.Color.White;
             this.topPanel.Location = new System.Drawing.Point(200, 0);
             this.topPanel.Name = "topPanel";
-            this.topPanel.Size = new System.Drawing.Size(824, 25);
+            this.topPanel.Size = new System.Drawing.Size(824, 24);
             this.topPanel.TabIndex = 1;
             // 
             // labelTime
@@ -146,16 +151,61 @@
             this.labelDate.Text = "18/11/2018";
             this.labelDate.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // btnStart
+            // 
+            this.btnStart.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnStart.Location = new System.Drawing.Point(500, 100);
+            this.btnStart.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStart.Name = "btnStart";
+            this.btnStart.Size = new System.Drawing.Size(100, 39);
+            this.btnStart.TabIndex = 3;
+            this.btnStart.Text = "START";
+            this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.BtnStart_Click);
+            // 
+            // btnStop
+            // 
+            this.btnStop.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnStop.Location = new System.Drawing.Point(624, 100);
+            this.btnStop.Margin = new System.Windows.Forms.Padding(2);
+            this.btnStop.Name = "btnStop";
+            this.btnStop.Size = new System.Drawing.Size(100, 39);
+            this.btnStop.TabIndex = 4;
+            this.btnStop.Text = "STOP";
+            this.btnStop.UseVisualStyleBackColor = true;
+            this.btnStop.Click += new System.EventHandler(this.BtnStop_Click);
+            // 
+            // txtLog
+            // 
+            this.txtLog.Location = new System.Drawing.Point(248, 165);
+            this.txtLog.Name = "txtLog";
+            this.txtLog.Size = new System.Drawing.Size(728, 445);
+            this.txtLog.TabIndex = 5;
+            this.txtLog.Text = "";
+            // 
+            // settingsScreen
+            // 
+            this.settingsScreen.Location = new System.Drawing.Point(200, 620);
+            this.settingsScreen.Margin = new System.Windows.Forms.Padding(4);
+            this.settingsScreen.Name = "settingsScreen";
+            this.settingsScreen.Size = new System.Drawing.Size(22, 20);
+            this.settingsScreen.TabIndex = 2;
+            // 
             // MainScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(230)))), ((int)(((byte)(230)))), ((int)(((byte)(230)))));
             this.ClientSize = new System.Drawing.Size(1024, 640);
+            this.Controls.Add(this.settingsScreen);
+            this.Controls.Add(this.txtLog);
+            this.Controls.Add(this.btnStop);
+            this.Controls.Add(this.btnStart);
             this.Controls.Add(this.topPanel);
             this.Controls.Add(this.leftPanel);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MainScreen";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -179,6 +229,10 @@
         private System.Windows.Forms.Panel panelSelected;
         private System.Windows.Forms.Button buttonMainScreen;
         private System.Windows.Forms.Button buttonSettings;
+        private SettingsScreen settingsScreen;
+        private System.Windows.Forms.Button btnStart;
+        private System.Windows.Forms.Button btnStop;
+        private System.Windows.Forms.RichTextBox txtLog;
     }
 }
 

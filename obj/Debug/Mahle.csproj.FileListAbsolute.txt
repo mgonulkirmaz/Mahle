@@ -13,3 +13,4 @@ C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\obj\Debug\Mahle
 C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\obj\Debug\Mahle.csproj.CopyComplete
 C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\obj\Debug\Mahle.exe
 C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\obj\Debug\Mahle.pdb
+C:\Users\musta\Documents\Visual Studio 2017\Projects\Mahle\Mahle\obj\Debug\Mahle.SettingsScreen.resources
